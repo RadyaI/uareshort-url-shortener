@@ -1,3 +1,5 @@
+import DisplayUrl from "@/components/displayUrl"
+import InputUrl from "@/components/inputUrl"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -8,7 +10,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="w-full h-full"></div>
+      <InputUrl></InputUrl>
+      <DisplayUrl></DisplayUrl>
     </>
   )
-} 
+}

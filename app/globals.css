@@ -4,13 +4,15 @@
 
 :root {
   --background: #FFF2F2;
-  --text: #2D336B;
-  --primary: #FFF2F2;
-  --secondary: #A9B5DF;
 }
 
-body {
-  color: var(--foreground);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
