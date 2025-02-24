@@ -1,6 +1,7 @@
 import DisplayUrl from "@/components/displayUrl"
 import InputUrl from "@/components/inputUrl"
 import { Metadata } from "next"
+import { Suspense } from "react"
 
 export const metadata: Metadata = {
   title: "Home - url short",
@@ -11,7 +12,9 @@ export default function Home() {
   return (
     <>
       <InputUrl></InputUrl>
-      <DisplayUrl></DisplayUrl>
+      <Suspense fallback={<div>Loading...</div>}>
+        <DisplayUrl></DisplayUrl>
+      </Suspense>
     </>
   )
 }

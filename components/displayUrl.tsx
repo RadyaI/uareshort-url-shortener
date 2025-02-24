@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation"
 import { toast, ToastContainer } from "react-toastify"
+
 export default function DisplayUrl() {
 
     const router = useRouter()
@@ -15,10 +16,10 @@ export default function DisplayUrl() {
 
     return (
         <>
-        <ToastContainer
-            theme="dark"
-            position="bottom-right"
-        />
+            <ToastContainer
+                theme="dark"
+                position="bottom-right"
+            />
             <div className="w-[90%] sm:w-1/2 mx-auto p-10 shadow rounded-lg bg-[#background] flex justify-center gap-5">
                 {shortCode && (
                     <>
