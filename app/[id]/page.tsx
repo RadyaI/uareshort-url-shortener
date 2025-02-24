@@ -25,6 +25,7 @@ export default function Redirect() {
         try {
             await addDoc(collection(db, "tracking"), {
                 ip: await getIp(),
+                shortCode: linkId,
                 clickedAt: Timestamp.now().toMillis()
             })
 
