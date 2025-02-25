@@ -10,7 +10,7 @@ export default function DisplayUrl() {
     const shortCode = linkId.get("id")
 
     const copyLink = () => {
-        navigator.clipboard.writeText(`localhost:3000/${shortCode}`)
+        navigator.clipboard.writeText(`https://usrt.vercel.app/${shortCode}`)
         toast.success("Copied!")
     }
 
