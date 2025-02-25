@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 }
 
 type LinkData = {
-    linkId: String
+    linkId: string
 }
 
-async function getLink(linkId: String) {
+async function getLink(linkId: any){
     try {
         const getData = await getDocs(query(
             collection(db, "url"),
@@ -29,7 +29,7 @@ async function getLink(linkId: String) {
     }
 }
 
-export default async function ViewLink({ params }: { params: { id: String } }) {
+export default async function ViewLink({ params }: { params: { id: any } }) {
     const linkData: any = await getLink(params.id)
 
     return (
