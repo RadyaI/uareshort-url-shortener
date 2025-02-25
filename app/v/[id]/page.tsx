@@ -29,8 +29,9 @@ async function getLink(linkId: string): Promise<any> {
     }
 }
 
-export default async function ViewLink({ params }: { params: { id: string } }) {
-    const linkData: any = await getLink(params.id)
+export default async function ViewLink({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    const linkData: any = await getLink(id);
 
     return (
         <>
