@@ -12,7 +12,7 @@ type LinkData = {
     linkId: string
 }
 
-async function getLink(linkId: any){
+async function getLink(linkId: string): Promise<any> {
     try {
         const getData = await getDocs(query(
             collection(db, "url"),
@@ -29,7 +29,7 @@ async function getLink(linkId: any){
     }
 }
 
-export default async function ViewLink({ params }: { params: { id: any } }) {
+export default async function ViewLink({ params }: { params: { id: string } }) {
     const linkData: any = await getLink(params.id)
 
     return (
