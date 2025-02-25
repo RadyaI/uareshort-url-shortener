@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <h1 className="text-center text-3xl font-bold uppercase mt-5">Url Shortener</h1>
       <InputUrl></InputUrl>
       <Suspense fallback={<div>Loading...</div>}>
         <DisplayUrl></DisplayUrl>
