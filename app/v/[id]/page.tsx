@@ -5,7 +5,7 @@ import { collection, getDocs, query, where } from "firebase/firestore"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "View - url short"
+    title: "View - UAreShort"
 }
 
 type LinkData = {
